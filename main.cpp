@@ -35,7 +35,7 @@ Node* find_kth_end(Node* head, int k)
 			if (probe == NULL)
 			{
 				//Now, the i's value is the offset, we need answer pointer to move the answer location.
-				for (int j = 0; j < i; j++)
+				for (int j = 0; j <= i; j++)
 				{
 					answer = answer->next;
 				}
@@ -72,10 +72,10 @@ Node* create_list(int n)
 
 int main()
 {
-	int n = 30;
+	int n = 30;		//It's for testing, n is the length of list.
 	Node* head, *result;
 	head = create_list(30);
 	result = find_kth_end(head, 7);
-
-	int i = 19;
+	printf("%d", result->value);
+	return 0;
 }
